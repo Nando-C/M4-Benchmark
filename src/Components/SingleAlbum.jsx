@@ -11,15 +11,16 @@ class SingleAlbum extends Component {
             <>
             {/* {console.log(this.props.album)} */}
             <Col className='px-2 mb-4'>
-                <Card >
-                    <Link to='/Album'>
+                <Card style={{ width: '18rem' }}>
+                    <Link to={'/Album/' + this.props.album.album.id}>
                         <Card.Img variant="top" src={this.props.album.album.cover_medium} />
                     </Link>
+                    <div class="card-play"></div>
                     {/* <i class="fab fa-spotify"></i> */}
                     <Card.Body className='card-body text-center p-3'>
                         <Card.Title><h5>{this.props.album.album.title}</h5></Card.Title>
                         <Card.Text className='card-text'>
-                            <Link to='/Artist'>
+                            <Link to={'/Artist/' + this.props.album.artist.id}>
                                 <p>{this.props.album.artist.name}</p>
                             </Link>
                         </Card.Text>

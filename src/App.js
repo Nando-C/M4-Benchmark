@@ -16,8 +16,8 @@ function App() {
         <Row>
           <SideMenu />
           <Route exact path='/' component={Home} />
-          <Route path='/Artist' component={Artist} />
-          <Route path='/Album' component={AlbumPage} />
+          <Route path='/Artist/:artistId' component={Artist} />
+          <Route path='/Album/:albumId' component={AlbumPage} />
         </Row>
         <Footer />
       </Router>

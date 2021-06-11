@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { Row, Col } from 'react-bootstrap'
+import { Row, } from 'react-bootstrap'
 import SingleAlbum from './SingleAlbum'
 
 class CardsDeck extends Component {
@@ -12,7 +12,7 @@ class CardsDeck extends Component {
     componentDidMount = async () => {
 
         try {
-            const response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=manuchao')
+            const response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=in-flames')
             const albums = await response.json()
             // console.log('albums', albums.data)
             const uniqueAlbums = albums.data.filter((alb, index, array) => array.findIndex(a => a.album.title === alb.album.title) === index)
@@ -33,7 +33,7 @@ class CardsDeck extends Component {
 
     render() { 
         return (  
-            < div id="cardsDeck">
+            < div id="cardsDeck" >
                 <Row id="deckHeader" >
                         <h3>#THROWBACKTHURSDAY</h3>
                 </Row>
@@ -43,10 +43,7 @@ class CardsDeck extends Component {
                     {(this.state.albumCollection.length === 0 && this.state.isLoading === false && this.state.isError === false)
                     ? <h2>We dont have this collection</h2>
                     : this.state.albumCollection.map(album => 
-                        // <Col className='px-1 mb-4'>
-                            
                             <SingleAlbum key={album.id} album={album} />
-                        // </Col>
                         )
                     }
                 </Row>
