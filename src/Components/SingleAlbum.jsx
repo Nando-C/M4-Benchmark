@@ -16,10 +16,12 @@ class SingleAlbum extends Component {
                         <Card.Img variant="top" src={this.props.album.album.cover_medium} />
                     </Link>
                     {/* <i class="fab fa-spotify"></i> */}
-                    <Card.Body className='text-center p-3'>
-                        <Card.Title>{this.props.album.album.title}</Card.Title>
-                        <Card.Text>
-                        {this.props.album.artist.name}
+                    <Card.Body className='card-body text-center p-3'>
+                        <Card.Title><h5>{this.props.album.album.title}</h5></Card.Title>
+                        <Card.Text className='card-text'>
+                            <Link to='/Artist'>
+                                <p>{this.props.album.artist.name}</p>
+                            </Link>
                         </Card.Text>
                         {/* <Button variant="primary">Go somewhere</Button> */}
                     </Card.Body>
