@@ -1,7 +1,7 @@
 import { Component } from 'react'
 import { Col } from 'react-bootstrap'
 
-class Album extends Component {
+class AlbumPage extends Component {
     state = {  }
     render() { 
         return (  
@@ -14,4 +14,4 @@ class Album extends Component {
     }
 }
  
-export default Album;
+export default AlbumPage;
