@@ -1,11 +1,14 @@
 import { Component } from 'react'
+import { Row } from 'react-bootstrap'
 
 class Footer extends Component {
     state = {  }
     render() { 
         return ( 
             <>
-            <h1>This is my Footer</h1>
+            <Row fixed="bottom">
+                <h1>This is my Footer</h1>
+            </Row>
             </>
         );
     }
